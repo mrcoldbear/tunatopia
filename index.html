@@ -1,0 +1,1818 @@
+<!DOCTYPE html>
+<html lang="th" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TUNATOPIA - Premium Deep Blue Ocean</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'deep-ocean': '#030a16',
+                        'navy-card': '#0a1526',
+                        'navy-light': '#0d1e36',
+                        'blue-gray': '#7a8b9e',
+                        'gold-premium': '#d4af37',
+                        'ice-cyan': '#7be1eb',
+                    },
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/css">
+        .nav-link-underline::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background-color: #d4af37;
+            transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        .nav-link-underline:hover::after,
+        .nav-link-underline.active::after {
+            width: 100%;
+        }
+
+        .scrolled {
+            background-color: rgba(3, 10, 22, 0.95) !important;
+            padding-top: 18px !important;
+            padding-bottom: 18px !important;
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+
+<body class="bg-deep-ocean font-sans text-white overflow-x-hidden tracking-[0.5px]">
+
+    <!-- Navbar -->
+    <header
+        class="navbar fixed top-0 left-0 w-full z-[1000] py-[30px] border-b border-ice-cyan/10 transition-all duration-500 ease-[cubic-bezier(0.165,0.84,0.44,1)]">
+        <div class="max-w-[1320px] w-[90%] mx-auto flex justify-between items-center">
+            <a href="#home" class="inline-flex items-center">
+                <img src="image/logo.png" alt="Tuna Topia Logo" class="h-10 sm:h-12 w-auto object-contain">
+            </a>
+
+            <nav
+                class="nav-menu fixed lg:static top-0 -left-full lg:left-0 w-full lg:w-auto h-screen lg:h-auto bg-deep-ocean/98 lg:bg-transparent backdrop-blur-md lg:backdrop-blur-none flex flex-col lg:flex-row justify-center lg:justify-start items-center gap-[35px] transition-all duration-500 ease-[cubic-bezier(0.77,0,0.175,1)] z-50 lg:z-auto">
+                <a href="#home"
+                    class="nav-link nav-link-underline text-base lg:text-[12px] uppercase tracking-[2px] text-white/65 hover:text-white transition-all duration-500 relative py-[5px] active">Home</a>
+                <a href="#home"
+                    class="nav-link nav-link-underline text-base lg:text-[12px] uppercase tracking-[2px] text-white/65 hover:text-white transition-all duration-500 relative py-[5px]">About</a>
+                <a href="#home"
+                    class="nav-link nav-link-underline text-base lg:text-[12px] uppercase tracking-[2px] text-white/65 hover:text-white transition-all duration-500 relative py-[5px]">News</a>
+                <a href="#home"
+                    class="nav-link nav-link-underline text-base lg:text-[12px] uppercase tracking-[2px] text-white/65 hover:text-white transition-all duration-500 relative py-[5px]">Sustainability</a>
+                <a href="#home"
+                    class="nav-link nav-link-underline text-base lg:text-[12px] uppercase tracking-[2px] text-white/65 hover:text-white transition-all duration-500 relative py-[5px]">Contact</a>
+            </nav>
+
+            <div class="flex items-center gap-[25px] z-[60]">
+                <a href="#home"
+                    class="hidden sm:inline-block border border-gold-premium text-gold-premium hover:bg-gold-premium hover:text-deep-ocean px-5 py-2 text-xs uppercase tracking-widest transition-all duration-500 font-medium">Explore</a>
+
+                <!-- Hamburger -->
+                <div class="hamburger lg:hidden cursor-pointer space-y-[6px]" aria-label="Open menu">
+                    <span class="bar block w-6 h-[1px] bg-white transition-all duration-300"></span>
+                    <span class="bar block w-6 h-[1px] bg-white transition-all duration-300"></span>
+                    <span class="bar block w-6 h-[1px] bg-white transition-all duration-300"></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home"
+        class="relative flex min-h-[100svh] items-center overflow-hidden bg-deep-ocean z-0 px-6 pt-[104px] pb-12 sm:px-8 lg:h-screen lg:px-0 lg:pt-0 lg:pb-0">
+
+        <!-- Hero Background Videos -->
+        <div class="hero-video-stack absolute inset-0">
+            <video
+                class="hero-bg-video active absolute inset-0 h-full w-full object-cover brightness-[1.15] contrast-[1.05]"
+                autoplay muted playsinline preload="auto">
+                <source src="video/tuna1.mp4" type="video/mp4">
+            </video>
+
+            <video class="hero-bg-video absolute inset-0 h-full w-full object-cover brightness-[1.15] contrast-[1.05]"
+                muted playsinline preload="auto">
+                <source src="video/tuna2.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <div
+            class="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-deep-ocean/15 via-deep-ocean/45 to-deep-ocean z-[1]">
+        </div>
+
+        <div
+            class="relative z-[2] mx-auto flex w-full max-w-[1320px] min-h-[calc(100svh-156px)] flex-col justify-center lg:h-[85%] lg:min-h-0 lg:justify-between">
+
+            <!-- Main Hero Content -->
+            <div class="grid grid-cols-1 items-center gap-10 lg:grid-cols-12 lg:gap-14 lg:my-auto">
+
+                <!-- Left Text -->
+                <div class="max-w-[720px] text-center sm:text-left lg:col-span-7">
+
+                    <span
+                        class="mb-5 inline-flex items-center justify-center gap-3 text-[11px] font-semibold uppercase tracking-[0.28em] text-gold-premium sm:justify-start sm:text-sm sm:tracking-[4px]">
+                        <span class="hidden h-px w-10 bg-gold-premium sm:block"></span>
+                        Premium Deep Ocean Tuna
+                    </span>
+
+                    <h1 class="mb-6 text-[clamp(2.15rem,9vw,3.35rem)] font-semibold uppercase leading-[1.08]
+                        tracking-[0.04em] text-ice-cyan drop-shadow-[0_4px_20px_rgba(0,0,0,0.45)] sm:text-[60px]
+                        sm:tracking-[6px] lg:text-[76px]">
+                        Explorer<br>
+                        Ocean Tuna<br class="block sm:hidden">
+
+                    </h1>
+
+                    <p
+                        class="mx-auto mb-8 max-w-[590px] text-sm font-light leading-[1.9] text-white/75 sm:mx-0 sm:text-base">
+                        From cold deep currents to premium seafood quality, TUNATOPIA selects tuna with freshness,
+                        texture, and responsibility at the heart of every catch.
+                    </p>
+
+                    <div class="flex flex-wrap justify-center gap-4 sm:justify-start">
+                        <a href="#home"
+                            class="inline-flex min-h-12 items-center justify-center rounded-full border border-gold-premium bg-gold-premium px-7 py-4 text-[11px] font-semibold uppercase tracking-[2px] text-deep-ocean transition-all duration-500 hover:-translate-y-1 hover:bg-transparent hover:text-white hover:shadow-[0_16px_36px_rgba(212,175,55,0.22)] sm:px-8">
+                            Discover Species
+                        </a>
+
+                        <a href="#home"
+                            class="inline-flex min-h-12 items-center justify-center rounded-full border border-white/25 bg-white/[0.04] px-7 py-4 text-[11px] font-semibold uppercase tracking-[2px] text-white backdrop-blur-sm transition-all duration-500 hover:-translate-y-1 hover:border-ice-cyan hover:text-ice-cyan sm:px-8">
+                            Our Product
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Floating Card Desktop -->
+                <div class="hidden lg:col-span-5 lg:block">
+                    <div
+                        class="ml-auto max-w-[390px] rounded-[30px] border border-white/10 bg-deep-ocean/45 p-7 backdrop-blur-xl shadow-[0_30px_90px_rgba(0,0,0,0.28)]">
+
+                        <span class="mb-4 block text-[11px] font-bold uppercase tracking-[3px] text-gold-premium">
+                            Premium Quality
+                        </span>
+
+                        <h3 class="mb-4 text-2xl font-light leading-tight tracking-[2px] text-white">
+                            Freshness Preserved<br>
+                            From Sea To Market
+                        </h3>
+
+                        <p class="mb-6 text-sm leading-[1.8] text-blue-gray">
+                            Selected tuna is handled through a controlled cold-chain process to maintain
+                            texture, color, and flavor.
+                        </p>
+
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="rounded-[18px] border border-white/10 bg-white/[0.04] p-4">
+                                <span class="block text-2xl font-semibold text-ice-cyan">-60°C</span>
+                                <p class="mt-1 text-[10px] uppercase tracking-[2px] text-white/45">
+                                    Cold Chain
+                                </p>
+                            </div>
+
+                            <div class="rounded-[18px] border border-white/10 bg-white/[0.04] p-4">
+                                <span class="block text-2xl font-semibold text-gold-premium">A+</span>
+                                <p class="mt-1 text-[10px] uppercase tracking-[2px] text-white/45">
+                                    Tuna Grade
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Grid Info -->
+            <div class="hidden lg:grid grid-cols-3 gap-5 border-t border-white/10 pt-[30px] mt-auto">
+
+                <div
+                    class="group rounded-[24px] border border-white/10 bg-white/[0.035] p-6 backdrop-blur-md transition-all duration-500 hover:-translate-y-1 hover:border-gold-premium/35 hover:bg-white/[0.06]">
+                    <div class="mb-4 flex items-center justify-between">
+                        <div class="text-lg text-ice-cyan">
+                            <i class="fa-solid fa-water"></i>
+                        </div>
+                        <span class="text-[11px] font-bold tracking-widest text-white/25">01</span>
+                    </div>
+
+                    <h4 class="mb-3 text-sm font-semibold uppercase tracking-[1.5px] text-white">
+                        Deep Ocean Origin
+                    </h4>
+
+                    <p class="text-xs leading-[1.8] text-blue-gray">
+                        Sourced from clean ocean currents where premium tuna grow strong and lean.
+                    </p>
+                </div>
+
+                <div
+                    class="group rounded-[24px] border border-white/10 bg-white/[0.035] p-6 backdrop-blur-md transition-all duration-500 hover:-translate-y-1 hover:border-gold-premium/35 hover:bg-white/[0.06]">
+                    <div class="mb-4 flex items-center justify-between">
+                        <div class="text-lg text-ice-cyan">
+                            <i class="fa-solid fa-snowflake"></i>
+                        </div>
+                        <span class="text-[11px] font-bold tracking-widest text-white/25">02</span>
+                    </div>
+
+                    <h4 class="mb-3 text-sm font-semibold uppercase tracking-[1.5px] text-white">
+                        Frozen At Peak Freshness
+                    </h4>
+
+                    <p class="text-xs leading-[1.8] text-blue-gray">
+                        Super-frozen instantly to maintain premium color, texture, and flavor.
+                    </p>
+                </div>
+
+                <div
+                    class="group rounded-[24px] border border-white/10 bg-white/[0.035] p-6 backdrop-blur-md transition-all duration-500 hover:-translate-y-1 hover:border-gold-premium/35 hover:bg-white/[0.06]">
+                    <div class="mb-4 flex items-center justify-between">
+                        <div class="text-lg text-ice-cyan">
+                            <i class="fa-solid fa-shield-heart"></i>
+                        </div>
+                        <span class="text-[11px] font-bold tracking-widest text-white/25">03</span>
+                    </div>
+
+                    <h4 class="mb-3 text-sm font-semibold uppercase tracking-[1.5px] text-white">
+                        Responsible Fishing
+                    </h4>
+
+                    <p class="text-xs leading-[1.8] text-blue-gray">
+                        Focused on sustainability, traceability, and respect for marine ecosystems.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ocean Column Section -->
+    <section class="bg-deep-ocean py-[70px]  relative overflow-hidden">
+        <div
+            class="max-w-[1320px] w-[92%] sm:w-[90%] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-stretch">
+            <div class="lg:col-span-5 grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-7">
+
+                <!-- Card 1 -->
+                <div
+                    class="group bg-gradient-to-b from-navy-card/95 to-deep-ocean/95 border border-ice-cyan/10 rounded-[22px] p-6 sm:p-7 min-h-[auto] md:min-h-[520px] xl:min-h-[560px] flex flex-col justify-between transition-all duration-500 hover:-translate-y-1 hover:border-ice-cyan/20">
+                    <div>
+                        <h3 class="text-[1.35rem] text-ice-cyan mb-[18px] tracking-[1px] font-light">Deep Ocean</h3>
+                        <p class="text-[0.82rem] text-blue-gray mb-7 leading-[1.8]">Explore the hidden world beneath the
+                            surface, where premium tuna move through cold, powerful currents.</p>
+                    </div>
+                    <div
+                        class="w-full h-[190px] sm:h-[210px] rounded-[18px] overflow-hidden mb-7 border border-white/5">
+                        <img src="image/a3.jpg" alt="Tuna underwater"
+                            class="w-full h-full object-cover brightness-[70%] contrast-[110%] group-hover:scale-[1.06] group-hover:brightness-[90%] group-hover:contrast-[105%] transition-all duration-500">
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <span class="text-[2.4rem] font-bold text-gold-premium leading-none">5</span>
+                        <div>
+                            <h4 class="text-[1.1rem] text-white mb-1 font-medium">Premium Grades</h4>
+                            <p class="text-[0.78rem] text-blue-gray leading-[1.7]">Selected for freshness, color,
+                                firmness, and taste.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div
+                    class="group bg-gradient-to-b from-navy-card/95 to-deep-ocean/95 border border-ice-cyan/10 rounded-[22px] p-6 sm:p-7 min-h-[auto] md:min-h-[520px] xl:min-h-[560px] flex flex-col justify-between transition-all duration-500 hover:-translate-y-1 hover:border-ice-cyan/20">
+                    <div>
+                        <h3 class="text-[1.35rem] text-ice-cyan mb-[18px] tracking-[1px] font-light">Pure Waters</h3>
+                        <p class="text-[0.82rem] text-blue-gray mb-7 leading-[1.8]">Sourced responsibly from clean ocean
+                            environments with careful handling from sea to table.</p>
+                    </div>
+                    <div
+                        class="w-full h-[190px] sm:h-[210px] rounded-[18px] overflow-hidden mb-7 border border-white/5">
+                        <img src="image/a4.png" alt="Ocean water"
+                            class="w-full h-full object-cover brightness-[70%] contrast-[110%] group-hover:scale-[1.06] group-hover:brightness-[90%] group-hover:contrast-[105%] transition-all duration-500">
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <span class="text-[2.4rem] font-bold text-gold-premium leading-none">4</span>
+                        <div>
+                            <h4 class="text-[1.1rem] text-white mb-1 font-medium">
+                                Ocean Catch Zone
+                            </h4>
+                            <p class="text-[0.78rem] text-blue-gray leading-[1.7]">
+                                Harvested from selected fishing grounds deep
+                                waters.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Ocean Right Panel -->
+            <div
+                class="lg:col-span-7 relative rounded-[22px] sm:rounded-[28px] overflow-hidden min-h-[360px] sm:min-h-[440px] lg:min-h-[auto] group border border-white/5">
+                <img src="image/a1.png" alt="Deep ocean tunnel" class="w-full h-full object-cover filter brightness-[80%] contrast-[100%] saturate-[115%]
+                    group-hover:scale-[1.02] transition-all duration-500">
+                <div
+                    class="absolute bottom-0 left-0 w-full p-8 sm:p-12 bg-gradient-to-t from-deep-ocean via-deep-ocean/70 to-transparent">
+                    <h2 class="text-3xl sm:text-[2.5rem] font-light text-white tracking-[2px] leading-tight mb-4">
+                        Journey Into<br>The Deep Blue</h2>
+                    <p class="text-xs sm:text-sm text-blue-gray leading-[1.8] max-w-[480px]">Discover the power,
+                        elegance, and quality of tuna from the heart of the ocean.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="bg-deep-ocean py-[70px]">
+
+        <div
+            class="max-w-[1320px] w-[92%] sm:w-[90%] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-[70px] items-center">
+
+            <div>
+                <span class="text-[0.75rem] tracking-[3px] text-gold-premium block mb-[15px] font-semibold">01 / OUR
+                    COMPANY</span>
+                <h2 class="text-3xl lg:text-[2.3rem] font-light tracking-[4px] text-white mb-5 uppercase">Deep Waters,
+                    Uncompromised Quality</h2>
+                <p class="text-sm text-blue-gray leading-[1.9] mb-[22px]">
+                    Tunatopia located in Mahachai, serves as the integrated, finished goods processing hub for the
+                    Nusatuna
+                    Group. Here, semi-finished, frozen raw material supply base is converted into finished goods for
+                    export to
+                    the U.S., Canadian, Caribbean, Australian, and ASEAN markets.</p>
+                <p class="text-sm text-blue-gray leading-[1.9] mb-[22px]">
+                    Nestled within the heart of the spralling Pacific Cold Storage Facility in Mahachai, Thailand,
+                    Provides
+                    state of the art, technologically advanced, frozen sashimi, tuna processing. Equipment includes
+                    frozen
+                    bandsaw processing lines, automatic vacuum machines, automatic weighing systems, full computerized
+                    product
+                    traceability, metal detectors and two 5 ton per cycle blast freezers. Frozen storage is unlimited.
+                </p>
+            </div>
+
+
+
+            <div class="rounded-md overflow-hidden shadow-[0_25px_60px_rgba(0,0,0,0.4)] border border-white/5">
+                <img src="image/a2.jpg" alt="Ocean Tuna Fishing" class="w-full h-full object-cover">
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section id="location" class="relative overflow-hidden bg-deep-ocean py-[80px] ">
+        <!-- Background glow -->
+        <div
+            class="pointer-events-none absolute left-[-12%] top-[8%] h-[420px] w-[420px] rounded-full bg-ice-cyan/10 blur-[90px]">
+        </div>
+        <div
+            class="pointer-events-none absolute right-[-10%] bottom-[5%] h-[460px] w-[460px] rounded-full bg-gold-premium/10 blur-[100px]">
+        </div>
+
+        <!-- Animated water grid -->
+        <div class="ocean-lines absolute inset-0 opacity-[0.08]"></div>
+
+        <div class="relative z-[2] mx-auto w-[92%] max-w-[1320px]">
+
+            <!-- Section Header -->
+            <div class="mx-auto mb-12 max-w-[760px] text-center">
+                <span class="mb-[15px] block text-[0.75rem] font-semibold uppercase tracking-[3px] text-gold-premium">
+                    02 / Global Location
+                </span>
+
+                <h2 class="mb-6 text-3xl font-light uppercase leading-tight tracking-[4px] text-white lg:text-[2.6rem]">
+                    Connected Across<br>
+                    Deep Blue Waters
+                </h2>
+
+                <p class="mx-auto max-w-[680px] text-sm leading-[1.9] text-blue-gray">
+                    Our strategic location in Mahachai, Thailand connects premium tuna processing,
+                    frozen storage, and export operations to key international markets across Asia,
+                    North America, Australia, and beyond.
+                </p>
+            </div>
+
+            <!-- Map Top Center -->
+            <div class="mx-auto mb-12 max-w-[1050px] lg:mb-16">
+                <div
+                    class="relative rounded-[32px] border border-ice-cyan/10 bg-gradient-to-br from-navy-card to-deep-ocean p-4 shadow-[0_30px_90px_rgba(0,0,0,0.35)] sm:p-6 lg:p-8">
+
+                    <!-- Map Lock Wrapper -->
+                    <div
+                        class="map-lock-box relative overflow-hidden rounded-[24px] border border-white/10 bg-deep-ocean">
+                        <img src="image/a3.png" alt="Global location map" class="location-map-img">
+
+                        <!-- Dark overlay -->
+                        <div
+                            class="pointer-events-none absolute inset-0 bg-gradient-to-b from-deep-ocean/5 via-deep-ocean/15 to-deep-ocean/35">
+                        </div>
+
+                        <!-- Route lines -->
+                        <svg class="pointer-events-none absolute inset-0 h-full w-full" viewBox="0 0 1832 801"
+                            preserveAspectRatio="xMidYMid meet">
+
+                            <!-- Mahachai to Seychelles -->
+                            <path class="route-line route-line-soon" d="M1042 547 C900 535, 760 555, 620 610" />
+
+                            <!-- Mahachai to Sidoarjo / Bali -->
+                            <path class="route-line route-line-factory" d="M1042 547 C1075 590, 1110 640, 1155 685" />
+
+                            <!-- Mahachai to Bitung -->
+                            <path class="route-line route-line-factory" d="M1042 547 C1160 565, 1260 605, 1360 645" />
+
+                            <!-- Mahachai to Biak -->
+                            <path class="route-line route-line-factory" d="M1042 547 C1220 555, 1390 610, 1510 665" />
+                        </svg>
+
+                        <!-- Main Pin: Mahachai -->
+                        <div class="location-pin main-pin" style="left: 56.9%; top: 68.3%;">
+                            <span></span>
+                            <i class="fa-solid fa-location-dot"></i>
+                            <small>Mahachai</small>
+                        </div>
+
+                        <!-- Seychelles -->
+                        <div class="location-pin map-pin-soon" style="left: 33.8%; top: 76.2%;">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <small>Seychelles</small>
+                        </div>
+
+                        <!-- Sidoarjo Bali -->
+                        <div class="location-pin map-pin-factory" style="left: 63.1%; top: 85.5%;">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <small>Sidoarjo Bali</small>
+                        </div>
+
+                        <!-- Bitung -->
+                        <div class="location-pin map-pin-factory" style="left: 74.2%; top: 80.5%;">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <small>Bitung</small>
+                        </div>
+
+                        <!-- Biak -->
+                        <div class="location-pin map-pin-factory" style="left: 82.4%; top: 83.2%;">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <small>Biak</small>
+                        </div>
+                    </div>
+
+                    <!-- Floating badge -->
+                    <div
+                        class="absolute top-6 left-6 right-6 rounded-[22px] border border-white/10 bg-deep-ocean/80 p-4 backdrop-blur-xl sm:left-auto sm:right-6 sm:w-[330px] lg:top-8 lg:right-8">
+
+                        <span class="block text-[10px] font-bold uppercase tracking-[3px] text-gold-premium">
+                            Headquarters
+                        </span>
+
+                        <h3 class="mt-2 text-lg font-semibold text-white">
+                            Mahachai, Thailand
+                        </h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Content Cards -->
+            <div class="grid grid-cols-1 gap-5 md:grid-cols-3">
+
+                <div class="location-info-card">
+                    <div class="mb-4 text-2xl text-ice-cyan">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <span class="mb-2 block text-[11px] font-bold uppercase tracking-[3px] text-gold-premium">
+                        01
+                    </span>
+                    <h3 class="mb-3 text-base font-semibold uppercase tracking-[2px] text-white">
+                        Mahachai Base
+                    </h3>
+                    <p class="text-sm leading-[1.8] text-blue-gray">
+                        Thailand-based processing and export hub located near major cold storage and seafood
+                        infrastructure.
+                    </p>
+                </div>
+
+                <div class="location-info-card">
+                    <div class="mb-4 text-2xl text-ice-cyan">
+                        <i class="fa-solid fa-snowflake"></i>
+                    </div>
+                    <span class="mb-2 block text-[11px] font-bold uppercase tracking-[3px] text-gold-premium">
+                        02
+                    </span>
+                    <h3 class="mb-3 text-base font-semibold uppercase tracking-[2px] text-white">
+                        Frozen Logistics
+                    </h3>
+                    <p class="text-sm leading-[1.8] text-blue-gray">
+                        Advanced frozen handling and storage systems help maintain tuna quality from processing to
+                        export.
+                    </p>
+                </div>
+
+                <div class="location-info-card">
+                    <div class="mb-4 text-2xl text-ice-cyan">
+                        <i class="fa-solid fa-ship"></i>
+                    </div>
+                    <span class="mb-2 block text-[11px] font-bold uppercase tracking-[3px] text-gold-premium">
+                        03
+                    </span>
+                    <h3 class="mb-3 text-base font-semibold uppercase tracking-[2px] text-white">
+                        Export Network
+                    </h3>
+                    <p class="text-sm leading-[1.8] text-blue-gray">
+                        Serving international markets including the U.S., Canada, Caribbean, Australia, and ASEAN
+                        regions.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT US & HERITAGE SECTION -->
+    <section id="about-heritage" class="relative overflow-hidden bg-deep-ocean py-[80px] ">
+        <!-- Background glow -->
+        <div
+            class="pointer-events-none absolute left-[-12%] top-[10%] h-[420px] w-[420px] rounded-full bg-ice-cyan/10 blur-[90px]">
+        </div>
+        <div
+            class="pointer-events-none absolute right-[-12%] bottom-[8%] h-[460px] w-[460px] rounded-full bg-gold-premium/10 blur-[100px]">
+        </div>
+
+        <!-- Ocean grid line -->
+        <div class="heritage-ocean-lines absolute inset-0 opacity-[0.07]"></div>
+
+        <div class="relative z-[2] mx-auto w-[92%] max-w-[1320px]">
+
+            <!-- Header -->
+            <div class="mx-auto mb-14 max-w-[760px] text-center lg:mb-20">
+                <span class="mb-[15px] block text-[0.75rem] font-semibold uppercase tracking-[3px] text-gold-premium">
+                    03 / Our Heritage
+                </span>
+
+                <h2 class="mb-6 text-3xl font-light uppercase leading-tight tracking-[4px] text-white lg:text-[2.7rem]">
+                    From Ocean<br class="sm:hidden">
+                    To Trust
+                </h2>
+
+                <p class="mx-auto max-w-[660px] text-sm leading-[1.9] text-blue-gray">
+                    Our journey is built on deep ocean expertise, advanced frozen processing,
+                    and a long-term commitment to premium tuna quality for global markets.
+                </p>
+            </div>
+
+            <!-- Main Heritage Layout -->
+            <div class="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-16">
+
+                <!-- Left Sticky Text -->
+                <div class="lg:col-span-4">
+                    <div class="lg:sticky lg:top-28">
+                        <div class="rounded-[28px] border border-white/10 bg-white/[0.04] p-7 backdrop-blur-xl lg:p-8">
+                            <span class="mb-4 block text-[11px] font-bold uppercase tracking-[3px] text-gold-premium">
+                                Our Story & Journey
+                            </span>
+
+                            <h3 class="mb-5 text-2xl font-light leading-tight tracking-[2px] text-white lg:text-[2rem]">
+                                Built Through Time,<br>
+                                Refined By The Sea.
+                            </h3>
+
+                            <p class="mb-6 text-sm leading-[1.9] text-blue-gray">
+                                From a small fishing operation to a premium international tuna supplier,
+                                every milestone reflects our focus on quality, innovation, and sustainability.
+
+                                From responsible fishing practices to
+                                precision processing in modern facilities,
+                                every step is carefully managed to ensure
+                                the highest standards of quality,
+                                safety and sustainability.
+                            </p>
+
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="rounded-[18px] border border-white/10 bg-deep-ocean/60 p-4">
+                                    <span class="block text-2xl font-semibold text-ice-cyan">15</span>
+                                    <p class="mt-1 text-[11px] uppercase tracking-[2px] text-blue-gray">
+                                        tons per day of whole tuna to frozen
+                                    </p>
+                                </div>
+
+                                <div class="rounded-[18px] border border-white/10 bg-deep-ocean/60 p-4">
+                                    <span class="block text-2xl font-semibold text-gold-premium">10</span>
+                                    <p class="mt-1 text-[11px] uppercase tracking-[2px] text-blue-gray">
+                                        tons of frozen loins into finished IVP portions
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Timeline -->
+                <div class="lg:col-span-8">
+                    <div class="heritage-timeline relative">
+
+                        <!-- Item 1 -->
+                        <div class="heritage-timeline-item">
+                            <div class="heritage-year">2012</div>
+                            <div class="heritage-card">
+                                <span class="heritage-dot"></span>
+                                <h4>The Genesis</h4>
+                                <p>
+                                    Started with two longline fishing vessels, focusing on fresh tuna supply
+                                    for local fish auction markets with careful handling and quality control.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Item 2 -->
+                        <div class="heritage-timeline-item">
+                            <div class="heritage-year">2016</div>
+                            <div class="heritage-card">
+                                <span class="heritage-dot"></span>
+                                <h4>Global Expansion</h4>
+                                <p>
+                                    Expanded the fishing fleet and established international partnerships,
+                                    beginning frozen tuna export to Japan and other premium seafood markets.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Item 3 -->
+                        <div class="heritage-timeline-item">
+                            <div class="heritage-year">2020</div>
+                            <div class="heritage-card">
+                                <span class="heritage-dot"></span>
+                                <h4>Ultra-Cold Innovation</h4>
+                                <p>
+                                    Introduced ultra-low temperature cold chain technology at -60°C,
+                                    preserving color, texture, and freshness for premium sashimi-grade tuna.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Item 4 -->
+                        <div class="heritage-timeline-item">
+                            <div class="heritage-year">2026</div>
+                            <div class="heritage-card">
+                                <span class="heritage-dot"></span>
+                                <h4>The Sustainable Future</h4>
+                                <p>
+                                    Moving toward a greener operation with international sustainability standards
+                                    and a wider export network covering more than 30 countries worldwide.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- TUNA PRODUCTS SHOWCASE SECTION -->
+    <section id="tuna-showcase" class="relative overflow-hidden bg-deep-ocean py-[80px]">
+        <!-- Background glow -->
+        <div
+            class="pointer-events-none absolute left-[-12%] top-[10%] h-[420px] w-[420px] rounded-full bg-ice-cyan/10 blur-[90px]">
+        </div>
+        <div
+            class="pointer-events-none absolute right-[-12%] bottom-[8%] h-[460px] w-[460px] rounded-full bg-gold-premium/10 blur-[100px]">
+        </div>
+
+        <!-- Ocean lines -->
+        <div class="tuna-showcase-lines absolute inset-0 opacity-[0.07]"></div>
+
+        <div class="relative z-[2] mx-auto w-[92%] max-w-[1320px]">
+
+            <!-- Header -->
+            <div class="mx-auto mb-12 max-w-[760px] text-center lg:mb-16">
+                <span class="mb-[15px] block text-[0.75rem] font-semibold uppercase tracking-[3px] text-gold-premium">
+                    04 / Tuna Products
+                </span>
+
+                <h2 class="mb-6 text-3xl font-light uppercase leading-tight tracking-[4px] text-white lg:text-[2.7rem]">
+                    Premium Tuna<br class="sm:hidden">
+                    Cuts
+                </h2>
+
+                <p class="mx-auto max-w-[680px] text-sm leading-[1.9] text-blue-gray">
+                    Explore our core tuna product formats designed for retail, sashimi, food service,
+                    and ready-to-use seafood programs.
+                </p>
+            </div>
+
+            <!-- Tabs -->
+            <div
+                class="showcase-tabs-new mx-auto mb-10 flex max-w-[760px] gap-3 overflow-x-auto rounded-full border border-white/10 bg-white/[0.04] p-2 backdrop-blur-xl">
+                <button type="button" class="tab-btn-new active" data-target="tuna-loin">Tuna Loin</button>
+                <button type="button" class="tab-btn-new" data-target="tuna-saku">Tuna Saku</button>
+                <button type="button" class="tab-btn-new" data-target="tuna-poke">Tuna Poke</button>
+                <button type="button" class="tab-btn-new" data-target="tuna-steak">Tuna Steak</button>
+            </div>
+
+            <!-- Content Wrapper -->
+            <div class="showcase-wrapper-new">
+
+                <!-- TUNA LOIN -->
+                <div class="showcase-panel active" id="tuna-loin">
+                    <div class="grid grid-cols-1 gap-8 lg:grid-cols-12 lg:gap-12">
+
+                        <!-- Left -->
+                        <div class="lg:col-span-7">
+                            <div
+                                class="relative h-full rounded-[30px] border border-white/10 bg-gradient-to-br from-navy-card/90 to-deep-ocean/95 p-7 backdrop-blur-xl lg:p-9">
+
+                                <span
+                                    class="absolute right-7 top-7 text-[4rem] font-bold leading-none text-white/[0.04] lg:text-[6rem]">
+                                    01
+                                </span>
+
+                                <span
+                                    class="mb-4 block text-[11px] font-bold uppercase tracking-[3px] text-gold-premium">
+                                    Retail & Food Service Cut
+                                </span>
+
+                                <h3
+                                    class="mb-5 text-4xl font-light uppercase leading-none tracking-[0.04em] text-white lg:text-[4.2rem]">
+                                    Tuna<br>
+                                    <span class="text-ice-cyan">Loin</span>
+                                </h3>
+
+                                <p class="mb-8 max-w-[650px] text-sm leading-[1.9] text-blue-gray">
+                                    Premium tuna loin prepared for retail and food service applications.
+                                    Suitable for portioning, slicing, and further processing.
+                                </p>
+
+                                <div class="profile-box">
+                                    <h4>Product Specification</h4>
+
+                                    <div class="profile-row">
+                                        <span>Size</span>
+                                        <div class="profile-bar"><i style="width:80%"></i></div>
+                                        <strong>3–8 lbs</strong>
+                                    </div>
+
+                                    <div class="profile-row">
+                                        <span>Packing</span>
+                                        <div class="profile-bar"><i style="width:90%"></i></div>
+                                        <strong>15 / 30 lbs case</strong>
+                                    </div>
+
+                                    <div class="profile-row">
+                                        <span>Method</span>
+                                        <div class="profile-bar"><i style="width:85%"></i></div>
+                                        <strong>Tasteless Smoke</strong>
+                                    </div>
+                                </div>
+
+                                <div class="species-metrics">
+                                    <div>
+                                        <strong>3–8</strong>
+                                        <span>lbs Size Range</span>
+                                    </div>
+                                    <div>
+                                        <strong>CO</strong>
+                                        <span>Treated Method</span>
+                                    </div>
+                                    <div>
+                                        <strong>FIP</strong>
+                                        <span>MSC / Oceanwise</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Right -->
+                        <div class="lg:col-span-5">
+                            <div class="species-image-card">
+                                <img src="image/tuna-loin.png" alt="Tuna Loin">
+
+                                <div class="species-floating-tag top-6 right-6">
+                                    <span></span>
+                                    Size 3–8 lbs
+                                </div>
+
+                                <div class="species-floating-tag bottom-6 left-6">
+                                    <span></span>
+                                    15 / 30 lbs Case
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- TUNA SAKU -->
+                <div class="showcase-panel" id="tuna-saku">
+                    <div class="grid grid-cols-1 gap-8 lg:grid-cols-12 lg:gap-12">
+
+                        <!-- Left -->
+                        <div class="lg:col-span-7">
+                            <div
+                                class="relative h-full rounded-[30px] border border-white/10 bg-gradient-to-br from-navy-card/90 to-deep-ocean/95 p-7 backdrop-blur-xl lg:p-9">
+
+                                <span
+                                    class="absolute right-7 top-7 text-[4rem] font-bold leading-none text-white/[0.04] lg:text-[6rem]">
+                                    02
+                                </span>
+
+                                <span
+                                    class="mb-4 block text-[11px] font-bold uppercase tracking-[3px] text-gold-premium">
+                                    Sashimi Ready Cut
+                                </span>
+
+                                <h3
+                                    class="mb-5 text-4xl font-light uppercase leading-none tracking-[0.04em] text-white lg:text-[4.2rem]">
+                                    Tuna<br>
+                                    <span class="text-ice-cyan">Saku</span>
+                                </h3>
+
+                                <p class="mb-8 max-w-[650px] text-sm leading-[1.9] text-blue-gray">
+                                    Rectangular tuna block designed for sashimi, sushi, and clean slicing.
+                                    Ideal for consistent presentation and professional kitchen use.
+                                </p>
+
+                                <div class="profile-box">
+                                    <h4>Product Specification</h4>
+
+                                    <div class="profile-row">
+                                        <span>Size</span>
+                                        <div class="profile-bar"><i style="width:75%"></i></div>
+                                        <strong>8 / 12 / 13 oz up</strong>
+                                    </div>
+
+                                    <div class="profile-row">
+                                        <span>Packing</span>
+                                        <div class="profile-bar"><i style="width:80%"></i></div>
+                                        <strong>10 lbs case</strong>
+                                    </div>
+
+                                    <div class="profile-row">
+                                        <span>Method</span>
+                                        <div class="profile-bar"><i style="width:85%"></i></div>
+                                        <strong>Tasteless Smoke</strong>
+                                    </div>
+                                </div>
+
+                                <div class="species-metrics">
+                                    <div>
+                                        <strong>8oz+</strong>
+                                        <span>Product Size</span>
+                                    </div>
+                                    <div>
+                                        <strong>10lbs</strong>
+                                        <span>Case Packing</span>
+                                    </div>
+                                    <div>
+                                        <strong>MSC</strong>
+                                        <span>FIP / Oceanwise</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Right -->
+                        <div class="lg:col-span-5">
+                            <div class="species-image-card">
+                                <img src="image/tuna-saku.png" alt="Tuna Saku">
+
+                                <div class="species-floating-tag top-6 right-6">
+                                    <span></span>
+                                    Sashimi Ready
+                                </div>
+
+                                <div class="species-floating-tag bottom-6 left-6">
+                                    <span></span>
+                                    10 lbs Case
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- TUNA POKE -->
+                <div class="showcase-panel" id="tuna-poke">
+                    <div class="grid grid-cols-1 gap-8 lg:grid-cols-12 lg:gap-12">
+
+                        <!-- Left -->
+                        <div class="lg:col-span-7">
+                            <div
+                                class="relative h-full rounded-[30px] border border-white/10 bg-gradient-to-br from-navy-card/90 to-deep-ocean/95 p-7 backdrop-blur-xl lg:p-9">
+
+                                <span
+                                    class="absolute right-7 top-7 text-[4rem] font-bold leading-none text-white/[0.04] lg:text-[6rem]">
+                                    03
+                                </span>
+
+                                <span
+                                    class="mb-4 block text-[11px] font-bold uppercase tracking-[3px] text-gold-premium">
+                                    Ready-To-Use Cube Cut
+                                </span>
+
+                                <h3
+                                    class="mb-5 text-4xl font-light uppercase leading-none tracking-[0.04em] text-white lg:text-[4.2rem]">
+                                    Tuna<br>
+                                    <span class="text-ice-cyan">Poke</span>
+                                </h3>
+
+                                <p class="mb-8 max-w-[650px] text-sm leading-[1.9] text-blue-gray">
+                                    Pre-cut tuna cubes for poke bowls, salads, sushi bars, and ready-to-serve seafood
+                                    menus.
+                                    Designed for convenience and consistent portioning.
+                                </p>
+
+                                <div class="profile-box">
+                                    <h4>Product Specification</h4>
+
+                                    <div class="profile-row">
+                                        <span>Size</span>
+                                        <div class="profile-bar"><i style="width:70%"></i></div>
+                                        <strong>1 / 1.5 / 2 cm</strong>
+                                    </div>
+
+                                    <div class="profile-row">
+                                        <span>Packing</span>
+                                        <div class="profile-bar"><i style="width:80%"></i></div>
+                                        <strong>10 lbs case</strong>
+                                    </div>
+
+                                    <div class="profile-row">
+                                        <span>Method</span>
+                                        <div class="profile-bar"><i style="width:85%"></i></div>
+                                        <strong>Tasteless Smoke</strong>
+                                    </div>
+                                </div>
+
+                                <div class="species-metrics">
+                                    <div>
+                                        <strong>1–2cm</strong>
+                                        <span>Cube Size</span>
+                                    </div>
+                                    <div>
+                                        <strong>10lbs</strong>
+                                        <span>Case Packing</span>
+                                    </div>
+                                    <div>
+                                        <strong>FIP</strong>
+                                        <span>MSC / Oceanwise</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Right -->
+                        <div class="lg:col-span-5">
+                            <div class="species-image-card">
+                                <img src="image/tuna-poke.png" alt="Tuna Poke">
+
+                                <div class="species-floating-tag top-6 right-6">
+                                    <span></span>
+                                    1–2 cm Cubes
+                                </div>
+
+                                <div class="species-floating-tag bottom-6 left-6">
+                                    <span></span>
+                                    Ready To Serve
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- TUNA STEAK -->
+                <div class="showcase-panel" id="tuna-steak">
+                    <div class="grid grid-cols-1 gap-8 lg:grid-cols-12 lg:gap-12">
+
+                        <!-- Left -->
+                        <div class="lg:col-span-7">
+                            <div
+                                class="relative h-full rounded-[30px] border border-white/10 bg-gradient-to-br from-navy-card/90 to-deep-ocean/95 p-7 backdrop-blur-xl lg:p-9">
+
+                                <span
+                                    class="absolute right-7 top-7 text-[4rem] font-bold leading-none text-white/[0.04] lg:text-[6rem]">
+                                    04
+                                </span>
+
+                                <span
+                                    class="mb-4 block text-[11px] font-bold uppercase tracking-[3px] text-gold-premium">
+                                    Retail Steak Cut
+                                </span>
+
+                                <h3
+                                    class="mb-5 text-4xl font-light uppercase leading-none tracking-[0.04em] text-white lg:text-[4.2rem]">
+                                    Tuna<br>
+                                    <span class="text-ice-cyan">Steak</span>
+                                </h3>
+
+                                <p class="mb-8 max-w-[650px] text-sm leading-[1.9] text-blue-gray">
+                                    Portion-controlled tuna steak for retail and food service programs.
+                                    Designed for consistent weight, clean shape, and convenient cooking.
+                                </p>
+
+                                <div class="profile-box">
+                                    <h4>Product Specification</h4>
+
+                                    <div class="profile-row">
+                                        <span>Size</span>
+                                        <div class="profile-bar"><i style="width:72%"></i></div>
+                                        <strong>4 / 6 / 8 oz</strong>
+                                    </div>
+
+                                    <div class="profile-row">
+                                        <span>Packing</span>
+                                        <div class="profile-bar"><i style="width:80%"></i></div>
+                                        <strong>10 lbs case</strong>
+                                    </div>
+
+                                    <div class="profile-row">
+                                        <span>Method</span>
+                                        <div class="profile-bar"><i style="width:85%"></i></div>
+                                        <strong>Tasteless Smoke</strong>
+                                    </div>
+                                </div>
+
+                                <div class="species-metrics">
+                                    <div>
+                                        <strong>4–8oz</strong>
+                                        <span>Steak Size</span>
+                                    </div>
+                                    <div>
+                                        <strong>10lbs</strong>
+                                        <span>Case Packing</span>
+                                    </div>
+                                    <div>
+                                        <strong>CO</strong>
+                                        <span>FIP / MSC / Oceanwise</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Right -->
+                        <div class="lg:col-span-5">
+                            <div class="species-image-card">
+                                <img src="image/tuna-steak.png" alt="Tuna Steak">
+
+                                <div class="species-floating-tag top-6 right-6">
+                                    <span></span>
+                                    4 / 6 / 8 oz
+                                </div>
+
+                                <div class="species-floating-tag bottom-6 left-6">
+                                    <span></span>
+                                    Retail Ready
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- CORE VALUES SECTION -->
+    <section id="core-values" class="relative overflow-hidden bg-white py-[80px] ">
+        <div
+            class="pointer-events-none absolute left-[-10%] top-[-20%] h-[420px] w-[420px] rounded-full bg-ice-cyan/10 blur-[90px]">
+        </div>
+        <div
+            class="pointer-events-none absolute right-[-10%] bottom-[-20%] h-[420px] w-[420px] rounded-full bg-gold-premium/10 blur-[100px]">
+        </div>
+
+        <div class="relative z-[2] mx-auto w-[92%] max-w-[1320px]">
+
+            <!-- Header -->
+            <div class="mx-auto mb-14 max-w-[760px] text-center">
+                <span class="mb-[15px] block text-[0.75rem] font-semibold uppercase tracking-[3px] text-gold-premium">
+                    05 / What We Believe
+                </span>
+
+                <h2 class="text-3xl font-light uppercase leading-tight tracking-[4px] text-[#0a1526] lg:text-[2.7rem]">
+                    Our Core Values
+                </h2>
+
+                <div class="mx-auto mt-5 h-[2px] w-[60px] bg-gold-premium"></div>
+
+                <p class="mx-auto mt-6 max-w-[680px] text-sm leading-[1.9] text-slate-500">
+                    Our values guide every step of our seafood operations — from responsible sourcing and
+                    food safety to innovation, traceability, and care for local communities.
+                </p>
+            </div>
+
+            <!-- Cards -->
+            <div class="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
+
+                <!-- Card 1 -->
+                <div class="core-value-card">
+                    <div class="core-value-icon">
+                        <i class="fa-solid fa-shield-heart"></i>
+                    </div>
+
+                    <div>
+                        <h3>Food Safety</h3>
+                        <p>
+                            Our facilities follow strict quality standards and advanced laboratory control
+                            to ensure all products are safe, clean, and suitable for consumption.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="core-value-card">
+                    <div class="core-value-icon">
+                        <i class="fa-solid fa-fish-fins"></i>
+                    </div>
+
+                    <div>
+                        <h3>Sustainable Fisheries</h3>
+                        <p>
+                            We support responsible tuna sourcing methods that help preserve ocean health
+                            and strengthen local fishing communities.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="core-value-card">
+                    <div class="core-value-icon">
+                        <i class="fa-solid fa-people-group"></i>
+                    </div>
+
+                    <div>
+                        <h3>Local Empowerment</h3>
+                        <p>
+                            We are committed to empowering local people and women through opportunities,
+                            skill development, and long-term community support.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="core-value-card">
+                    <div class="core-value-icon">
+                        <i class="fa-solid fa-magnifying-glass-chart"></i>
+                    </div>
+
+                    <div>
+                        <h3>Transparency</h3>
+                        <p>
+                            Traceability allows us to follow products through the supply chain, from the
+                            fishermen who caught the fish to the finished goods.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="core-value-card">
+                    <div class="core-value-icon">
+                        <i class="fa-solid fa-lightbulb"></i>
+                    </div>
+
+                    <div>
+                        <h3>Innovation</h3>
+                        <p>
+                            We continuously improve our methods, technology, and product quality while
+                            embracing more efficient and eco-friendly operations.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="core-value-card">
+                    <div class="core-value-icon">
+                        <i class="fa-solid fa-leaf"></i>
+                    </div>
+
+                    <div>
+                        <h3>Carbon Neutrality</h3>
+                        <p>
+                            We work to reduce carbon emissions throughout our supply chain, from fishing
+                            practices and processing to cold storage and export logistics.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CERTIFICATIONS SECTION -->
+    <section id="certifications" class="relative overflow-hidden bg-white py-[80px] ">
+        <!-- Soft background glow -->
+        <div
+            class="pointer-events-none absolute left-[-10%] top-[-20%] h-[420px] w-[420px] rounded-full bg-ice-cyan/10 blur-[90px]">
+        </div>
+        <div
+            class="pointer-events-none absolute right-[-10%] bottom-[-20%] h-[420px] w-[420px] rounded-full bg-gold-premium/10 blur-[100px]">
+        </div>
+
+        <div class="relative z-[2] mx-auto w-[92%] max-w-[1320px]">
+
+            <!-- Header -->
+            <div class="mx-auto mb-14 max-w-[760px] text-center">
+                <span class="mb-[15px] block text-[0.75rem] font-semibold uppercase tracking-[3px] text-gold-premium">
+                    06 / Certifications
+                </span>
+
+                <h2 class="text-3xl font-light uppercase leading-tight tracking-[4px] text-[#0a1526] lg:text-[2.7rem]">
+                    Manufacturing<br class="sm:hidden">
+                    Standards
+                </h2>
+
+                <div class="mx-auto mt-5 h-[2px] w-[60px] bg-gold-premium"></div>
+
+                <p class="mx-auto mt-6 max-w-[680px] text-sm leading-[1.9] text-slate-500">
+                    Our operations follow recognized international standards for food safety,
+                    ethical trade, sustainability, traceability, and export compliance.
+                </p>
+            </div>
+
+            <!-- Standard Badges -->
+            <div class="cert-logo-grid mb-12">
+                <div class="cert-logo-card">
+                    <img src="image/b1.png" alt="MSC Certification">
+                    <span>SMETA</span>
+                    <small>Ethical Trade Audit</small>
+                </div>
+
+                <div class="cert-logo-card">
+                    <img src="image/b2.png" alt="MSC Certification">
+                    <span>HACCP</span>
+                    <small>Food Safety</small>
+                </div>
+
+                <div class="cert-logo-card">
+                    <img src="image/b3.png" alt="MSC Certification">
+                    <span>Clean Water</span>
+                    <small>Responsible Process</small>
+                </div>
+
+                <div class="cert-logo-card">
+                    <img src="image/b4.png" alt="MSC Certification">
+                    <span>MSC</span>
+                    <small>Chain of Custody</small>
+                </div>
+
+                <div class="cert-logo-card">
+                    <img src="image/b5.png" alt="MSC Certification">
+                    <span>BRCGS</span>
+                    <small>Food Safety</small>
+                </div>
+
+                <div class="cert-logo-card">
+                    <img src="image/b6.png" alt="MSC Certification">
+                    <span>FDA</span>
+                    <small>Registration</small>
+                </div>
+            </div>
+
+            <!-- Details -->
+            <div class="grid grid-cols-1 gap-8 lg:grid-cols-12 lg:items-center">
+
+
+
+                <!-- Right List -->
+                <div class="lg:col-span-12">
+                    <div class="cert-list-card">
+                        <h3>Certifications and Standards</h3>
+
+                        <ul>
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                <span>BRCGS Certified Ready to Eat</span>
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                <span>SMETA 4 Pillars</span>
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                <span>MSC Chain of Custody</span>
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                <span>EU, Canadian and US FDA Registration Numbers</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- PROCESSING SECTION -->
+    <section id="processing" class="relative overflow-hidden bg-white pt-[80px] ">
+        <!-- Background glow -->
+        <div
+            class="pointer-events-none absolute left-[-10%] top-[-20%] h-[420px] w-[420px] rounded-full bg-ice-cyan/10 blur-[90px]">
+        </div>
+        <div
+            class="pointer-events-none absolute right-[-10%] bottom-[-20%] h-[420px] w-[420px] rounded-full bg-gold-premium/10 blur-[100px]">
+        </div>
+
+        <div class="relative z-[2] mx-auto w-[92%] max-w-[1320px]">
+
+            <!-- Header -->
+            <div class="mb-14 flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
+                <div>
+                    <span
+                        class="mb-[15px] block text-[0.75rem] font-semibold uppercase tracking-[3px] text-gold-premium">
+                        07 / Processing
+                    </span>
+
+                    <h2
+                        class="text-[3rem] font-extrabold leading-none tracking-[-0.06em] text-black sm:text-[4.5rem] lg:text-[5.6rem]">
+                        Processing
+                    </h2>
+
+                    <div class="mt-5 h-[2px] w-[180px] bg-black sm:w-[260px]"></div>
+                </div>
+
+                <p class="max-w-[560px] text-sm leading-[1.9] text-slate-500 lg:text-right">
+                    Our processing system is designed to improve worker efficiency, weighing accuracy,
+                    product consistency, and clean movement from station to station.
+                </p>
+            </div>
+
+            <!-- Processing Steps -->
+            <div class="processing-flow relative grid grid-cols-1 gap-8 lg:grid-cols-3 lg:gap-7">
+
+                <!-- Step 1 -->
+                <article class="processing-card group">
+                    <div class="processing-image">
+                        <img src="image/prepare.jpg" alt="Raw tuna preparation">
+                        <span class="processing-step-number">01</span>
+                    </div>
+
+                    <div class="processing-content">
+                        <div class="processing-icon">
+                            <i class="fa-solid fa-fish"></i>
+                        </div>
+
+                        <span class="processing-kicker">Step 01</span>
+
+                        <h3>Preparation</h3>
+
+                        <p>
+                            Tuna steaks are prepared and checked before entering the weighing and batching line,
+                            ensuring clean handling and consistent product condition.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- Step 2 -->
+                <article class="processing-card group">
+                    <div class="processing-image">
+                        <img src="image/weight.jpg" alt="Weighing and batching">
+                        <span class="processing-step-number">02</span>
+                    </div>
+
+                    <div class="processing-content">
+                        <div class="processing-icon">
+                            <i class="fa-solid fa-scale-balanced"></i>
+                        </div>
+
+                        <span class="processing-kicker">Step 02</span>
+
+                        <h3>Weighing & Batching</h3>
+
+                        <p>
+                            The weight batcher selects steaks from predetermined size ranges and combines them
+                            accurately to match retail net weight requirements.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- Step 3 -->
+                <article class="processing-card group">
+                    <div class="processing-image">
+                        <img src="image/packing.jpg" alt="Packing and conveyor system">
+                        <span class="processing-step-number">03</span>
+                    </div>
+
+                    <div class="processing-content">
+                        <div class="processing-icon">
+                            <i class="fa-solid fa-box-open"></i>
+                        </div>
+
+                        <span class="processing-kicker">Step 03</span>
+
+                        <h3>Packing Flow</h3>
+
+                        <p>
+                            The conveyor system moves steaks smoothly from station to station, reducing damage,
+                            improving workflow, and supporting accurate retail bag programs.
+                        </p>
+                    </div>
+                </article>
+
+            </div>
+
+            <!-- Bottom Note -->
+            <div
+                class="mt-12 rounded-[28px] border border-ice-cyan/10 bg-gradient-to-br from-navy-card/95 to-deep-ocean/95 p-7 shadow-[0_24px_70px_rgba(3,10,22,0.28)] lg:p-8">
+
+                <div class="mb-5 flex items-center gap-4">
+                    <div
+                        class="grid h-12 w-12 shrink-0 place-items-center rounded-full border border-ice-cyan/20 bg-ice-cyan/10 text-ice-cyan">
+                        <i class="fa-solid fa-gear"></i>
+                    </div>
+
+                    <div>
+                        <span class="block text-[11px] font-bold uppercase tracking-[3px] text-gold-premium">
+                            Processing Efficiency
+                        </span>
+                        <h3 class="mt-1 text-lg font-semibold text-white">
+                            Designed for Accuracy and Product Care
+                        </h3>
+                    </div>
+                </div>
+
+                <p class="text-sm leading-[1.9] text-blue-gray">
+                    Tunatopia was designed to increase worker efficiency and accuracy in weighing and combining
+                    steaks for retail bag programs. The conveyor system allows steaks to move from station to station
+                    without bumping or damaging the steak shape, reducing the need for raw steaks to be placed into
+                    baskets.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+
+    <!-- Depth Zones Section -->
+    <section id="depth-zones" class="bg-white text-[#07162a] py-[70px]">
+        <div
+            class="max-w-[1320px] w-[92%] sm:w-[90%] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-[70px] items-center">
+            <div>
+                <span class="text-xs uppercase tracking-[0.25em] font-extrabold text-gold-premium mb-4 block">Ocean
+                    Knowledge</span>
+                <h2 class="text-3xl sm:text-[2.5rem] font-light text-deep-ocean tracking-[1px] leading-tight mb-6">
+                    Tuna Depth Zones<br>in the Ocean
+                </h2>
+                <p class="text-sm text-slate-500 leading-[1.8] mb-[38px] font-medium">
+                    Discover the common depth ranges where tuna swim, feed, and dive. This visual guide helps explain
+                    how different tuna species move through near-surface waters, feeding zones, and deeper ocean layers.
+                </p>
+
+                <div class="space-y-[24px]">
+                    <div
+                        class="flex gap-4 sm:gap-5 items-start bg-gradient-to-br from-navy-card to-deep-ocean p-5 sm:p-[26px] rounded-[22px] border border-ice-cyan/10 shadow-[0_18px_45px_rgba(3,10,22,0.22)]">
+                        <span
+                            class="w-[46px] h-[46px] rounded-full grid place-items-center bg-ice-cyan/10 text-ice-cyan border border-ice-cyan/20 text-xs font-extrabold shrink-0">
+                            01
+                        </span>
+                        <div>
+                            <h4 class="text-white font-bold text-[0.95rem] mb-[6px]">
+                                Near-Surface Zone
+                            </h4>
+                            <p class="text-blue-gray text-[0.82rem] leading-[1.6]">
+                                Yellowfin tuna are often found in warmer upper water columns.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="flex gap-4 sm:gap-5 items-start bg-gradient-to-br from-navy-card to-deep-ocean p-5 sm:p-[26px] rounded-[22px] border border-ice-cyan/10 shadow-[0_18px_45px_rgba(3,10,22,0.22)]">
+                        <span
+                            class="w-[46px] h-[46px] rounded-full grid place-items-center bg-ice-cyan/10 text-ice-cyan border border-ice-cyan/20 text-xs font-extrabold shrink-0">
+                            02
+                        </span>
+                        <div>
+                            <h4 class="text-white font-bold text-[0.95rem] mb-[6px]">
+                                Main Tuna Range
+                            </h4>
+                            <p class="text-blue-gray text-[0.82rem] leading-[1.6]">
+                                Many tuna species spend much of their time within mid-depth zones.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="flex gap-4 sm:gap-5 items-start bg-gradient-to-br from-navy-card to-deep-ocean p-5 sm:p-[26px] rounded-[22px] border border-ice-cyan/10 shadow-[0_18px_45px_rgba(3,10,22,0.22)]">
+                        <span
+                            class="w-[46px] h-[46px] rounded-full grid place-items-center bg-ice-cyan/10 text-ice-cyan border border-ice-cyan/20 text-xs font-extrabold shrink-0">
+                            03
+                        </span>
+                        <div>
+                            <h4 class="text-white font-bold text-[0.95rem] mb-[6px]">
+                                Deep-Dive Range
+                            </h4>
+                            <p class="text-blue-gray text-[0.82rem] leading-[1.6]">
+                                Bluefin tuna can dive much deeper to hunt and respond to temperature changes.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div
+                class="p-3 sm:p-[18px] rounded-[24px] sm:rounded-[34px] bg-white/72 border border-slate-100 shadow-[0_28px_80px_rgba(11,26,43,0.12)]">
+                <img src="image/tuna-depth-zones.png" alt="Tuna depth zones infographic" class="w-full rounded-[22px]">
+            </div>
+        </div>
+    </section>
+
+    <!-- TUNA ARTICLES SECTION -->
+    <section id="articles" class="relative overflow-hidden bg-deep-ocean py-[80px]">
+        <!-- Background glow -->
+        <div
+            class="pointer-events-none absolute left-[-12%] top-[10%] h-[420px] w-[420px] rounded-full bg-ice-cyan/10 blur-[90px]">
+        </div>
+        <div
+            class="pointer-events-none absolute right-[-12%] bottom-[8%] h-[460px] w-[460px] rounded-full bg-gold-premium/10 blur-[100px]">
+        </div>
+
+        <!-- Ocean lines -->
+        <div class="article-ocean-lines absolute inset-0 opacity-[0.07]"></div>
+
+        <div class="relative z-[2] mx-auto w-[92%] max-w-[1320px]">
+
+            <!-- Header -->
+            <div class="mx-auto mb-14 max-w-[760px] text-center">
+                <span class="mb-[15px] block text-[0.75rem] font-semibold uppercase tracking-[3px] text-gold-premium">
+                    08 / Tuna Insights
+                </span>
+
+                <h2 class="mb-6 text-3xl font-light uppercase leading-tight tracking-[4px] text-white lg:text-[2.7rem]">
+                    Latest Tuna<br class="sm:hidden">
+                    Articles
+                </h2>
+
+                <p class="mx-auto max-w-[680px] text-sm leading-[1.9] text-blue-gray">
+                    Explore useful stories and insights about tuna quality, processing, sustainability,
+                    and the deep ocean supply chain behind premium seafood.
+                </p>
+            </div>
+
+            <!-- Article Cards -->
+            <div class="grid grid-cols-1 gap-7 md:grid-cols-2 lg:grid-cols-3">
+
+                <!-- Article 1 -->
+                <article class="article-card group">
+                    <a href="#" class="block">
+                        <div class="article-image">
+                            <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&q=80&w=900"
+                                alt="Tuna swimming in deep ocean">
+
+                            <span class="article-category">
+                                Ocean Knowledge
+                            </span>
+                        </div>
+
+                        <div class="article-content">
+                            <div class="article-meta">
+                                <span>Deep Ocean</span>
+                                <span>•</span>
+                                <span>5 min read</span>
+                            </div>
+
+                            <h3>
+                                Understanding Tuna: From Deep Ocean Currents to Premium Quality
+                            </h3>
+
+                            <p>
+                                Learn how ocean temperature, swimming depth, and handling methods influence
+                                tuna texture, color, and freshness.
+                            </p>
+
+                            <div class="article-link">
+                                Read Article
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+
+                <!-- Article 2 -->
+                <article class="article-card group">
+                    <a href="#" class="block">
+                        <div class="article-image">
+                            <img src="https://images.unsplash.com/photo-1574484284002-952d92456975?auto=format&fit=crop&q=80&w=900"
+                                alt="Fresh tuna food preparation">
+
+                            <span class="article-category">
+                                Processing
+                            </span>
+                        </div>
+
+                        <div class="article-content">
+                            <div class="article-meta">
+                                <span>Cold Chain</span>
+                                <span>•</span>
+                                <span>4 min read</span>
+                            </div>
+
+                            <h3>
+                                Why Super-Frozen Technology Matters for Sashimi-Grade Tuna
+                            </h3>
+
+                            <p>
+                                Discover how ultra-low temperature storage helps preserve tuna color,
+                                firmness, flavor, and premium market value.
+                            </p>
+
+                            <div class="article-link">
+                                Read Article
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+
+                <!-- Article 3 -->
+                <article class="article-card group">
+                    <a href="#" class="block">
+                        <div class="article-image">
+                            <img src="https://images.unsplash.com/photo-1551244072-5d12893278ab?auto=format&fit=crop&q=80&w=900"
+                                alt="Ocean water and sustainable fishing">
+
+                            <span class="article-category">
+                                Sustainability
+                            </span>
+                        </div>
+
+                        <div class="article-content">
+                            <div class="article-meta">
+                                <span>Responsible Fishing</span>
+                                <span>•</span>
+                                <span>6 min read</span>
+                            </div>
+
+                            <h3>
+                                Responsible Tuna Sourcing and the Future of Ocean Sustainability
+                            </h3>
+
+                            <p>
+                                Explore how traceability, ethical sourcing, and sustainable fisheries
+                                support healthier oceans and stronger communities.
+                            </p>
+
+                            <div class="article-link">
+                                Read Article
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+
+            </div>
+
+            <!-- Optional Button -->
+            <div class="mt-12 text-center">
+                <a href="#contact"
+                    class="inline-flex items-center justify-center rounded-full border border-gold-premium px-8 py-4 text-[11px] font-bold uppercase tracking-[0.22em] text-gold-premium transition-all duration-500 hover:-translate-y-1 hover:bg-gold-premium hover:text-deep-ocean">
+                    View More Insights
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <!-- Sustainability Section -->
+    <section id="sustainability" class="bg-deep-ocean py-[70px]">
+        <div
+            class="max-w-[1320px] w-[92%] sm:w-[90%] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-[70px] items-center">
+            <div class="lg:col-span-5">
+                <h2 class="text-4xl lg:text-[2.8rem] font-light tracking-[3px] leading-[1.2] text-ice-cyan mb-[35px]">
+                    EXPLORE OUR <br>PROCESSING <br>FACILITY
+                </h2>
+
+                <div class="group inline-flex items-center gap-[15px] cursor-pointer mb-[35px]">
+                    <div
+                        class="w-[55px] h-[55px] border border-white rounded-full flex items-center justify-center text-[0.85rem] group-hover:bg-gold-premium group-hover:border-gold-premium group-hover:text-deep-ocean group-hover:scale-110 transition-all duration-500">
+                        <i class="fa-solid fa-play"></i>
+                    </div>
+                    <span class="text-[0.75rem] font-semibold tracking-[2px]">WATCH FACTORY TOUR</span>
+                </div>
+
+                <p class="text-[0.88rem] leading-[1.8] text-blue-gray mb-[25px]">
+                    Step inside our tuna processing facility in Mahachai, Thailand, where advanced frozen
+                    sashimi-grade production, automated weighing systems, computerized traceability, metal detection,
+                    and blast-freezing technology work together to ensure consistent quality from raw material to
+                    finished goods.
+                </p>
+
+                <span class="text-[0.7rem] text-white/25 uppercase tracking-[2px]">
+                    © TUNATOPIA PROCESSING FACILITY TOUR
+                </span>
+            </div>
+
+            <!-- Video/Photo Gallery Grid -->
+            <div
+                class="lg:col-span-7 grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 auto-rows-[86px] sm:auto-rows-[110px]">
+                <div
+                    class="group relative rounded-md overflow-hidden cursor-pointer border border-white/5 col-span-2 sm:col-span-4 row-span-3">
+                    <img src="image/c5.png" alt="Deep Sea Eco"
+                        class="w-full h-full object-cover brightness-[100%] grayscale-[0%] group-hover:brightness-100 group-hover:grayscale-0 transition-all duration-500">
+                    <div
+                        class="absolute bottom-[25px] right-[25px] w-[35px] h-[35px] border border-white/50 rounded-full flex items-center justify-center text-[0.75rem] group-hover:bg-ice-cyan group-hover:border-ice-cyan group-hover:text-deep-ocean transition-all duration-500">
+                        <i class="fa-solid fa-play text-[9px]"></i></div>
+                </div>
+                <div class="group relative rounded-md overflow-hidden cursor-pointer border border-white/5 row-span-2">
+                    <img src="image/c4.png" alt="Ocean Life"
+                        class="w-full h-full object-cover brightness-[45%] grayscale-[15%] group-hover:brightness-80 group-hover:grayscale-0 transition-all duration-500">
+                </div>
+                <div class="group relative rounded-md overflow-hidden cursor-pointer border border-white/5 row-span-2">
+                    <img src="image/c1.jpg" alt="Eco Fishing"
+                        class="w-full h-full object-cover brightness-[45%] grayscale-[15%] group-hover:brightness-80 group-hover:grayscale-0 transition-all duration-500">
+                </div>
+                <div class="group relative rounded-md overflow-hidden cursor-pointer border border-white/5 row-span-2">
+                    <img src="image/c2.jpg" alt="Clean Seas"
+                        class="w-full h-full object-cover brightness-[45%] grayscale-[15%] group-hover:brightness-80 group-hover:grayscale-0 transition-all duration-500">
+                </div>
+                <div class="group relative rounded-md overflow-hidden cursor-pointer border border-white/5 row-span-2">
+                    <img src="image/c3.jpg" alt="Premium Catch"
+                        class="w-full h-full object-cover brightness-[45%] grayscale-[15%] group-hover:brightness-80 group-hover:grayscale-0 transition-all duration-500">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Container Section -->
+    <footer id="contact" class="bg-[#040d1c] pt-16 sm:pt-24 pb-10 sm:pb-12 text-sm border-t border-white/5">
+        <div class="max-w-[1320px] w-[92%] sm:w-[90%] mx-auto space-y-12 sm:space-y-16">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+
+                <div class="space-y-6 md:col-span-1">
+                    <a href="#home" class="text-xl font-bold tracking-[5px] text-white">
+                        TUNATOPIA <span class="font-light text-gold-premium">TUNA</span>
+                    </a>
+                    <p class="leading-relaxed text-white/45">
+                        A world-class tuna processing and quality grading facility,
+                        delivering ocean-fresh tuna from the deep sea to your table with care for the environment.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="mb-6 text-xs font-extrabold uppercase tracking-[0.22em] text-white">Navigation</h4>
+                    <ul class="space-y-3 font-semibold text-white/65">
+                        <li><a href="#home" class="transition hover:text-[#d4af37]">Home Overview</a></li>
+                        <li><a href="#about" class="transition hover:text-[#d4af37]">Ocean Heritage</a></li>
+                        <li><a href="#species" class="transition hover:text-[#d4af37]">Premium Species</a></li>
+                        <li><a href="#sustainability" class="transition hover:text-[#d4af37]">Sustainability</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="mb-6 text-xs font-extrabold uppercase tracking-[0.22em] text-white">Social Media</h4>
+                    <ul class="space-y-3 font-semibold text-white/65">
+                        <li><a href="#" class="flex items-center gap-2 transition hover:text-[#d4af37]"><i
+                                    class="fa-brands fa-facebook-f text-xs"></i> Facebook</a></li>
+                        <li><a href="#" class="flex items-center gap-2 transition hover:text-[#d4af37]"><i
+                                    class="fa-brands fa-instagram text-xs"></i> Instagram</a></li>
+                        <li><a href="#" class="flex items-center gap-2 transition hover:text-[#d4af37]"><i
+                                    class="fa-brands fa-linkedin-in text-xs"></i> LinkedIn</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="mb-6 text-xs font-extrabold uppercase tracking-[0.22em] text-white">Get in Touch</h4>
+                    <p class="mb-5 leading-relaxed text-white/45">111/222 Bangsue<br>Bangkok, 10800</p>
+                    <div class="space-y-2">
+                        <a href="mailto:tunatopiastaff@tunatopia.com" class="block font-bold text-white/85 transition
+                            hover:text-[#d4af37]">Tunatopiastaff@Tunatopia.com</a>
+                        <a href="tel:+665558888"
+                            class="block font-bold text-white/85 transition hover:text-[#d4af37]">+66 555 8888</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Bottom -->
+            <div
+                class="flex flex-col gap-3 border-t border-white/10 pt-8 text-xs text-white/35 md:flex-row md:items-center md:justify-between">
+                <p>&copy; 2025 Tunatopia Company. All rights reserved.</p>
+                <p class="uppercase tracking-[0.2em]">Premium Deep Ocean Tuna</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
